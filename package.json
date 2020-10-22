@@ -1,0 +1,28 @@
+{
+  "name": "amada",
+  "version": "0.0.1",
+  "description": "amada backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll --runInBand --detectOpenHandles --testEnvironment=node"
+  },
+  "author": "Lee Taylor",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "config": "^3.3.2",
+    "express": "^4.17.1",
+    "joi": "^17.2.1",
+    "joi-objectid": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.5",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "jest": "^26.6.0",
+    "supertest": "^5.0.0"
+  }
+}

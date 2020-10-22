@@ -1,0 +1,4 @@
+{
+    "db": "mongodb://localhost/amada",
+    "jwtPrivateKey": ""
+}
