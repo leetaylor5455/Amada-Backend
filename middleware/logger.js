@@ -57,7 +57,7 @@ const logger = createLogger({
         new transports.Console({ colorize: true, prettyPrint: true }), 
         new transports.File(options.file.info),
         new transports.File(options.file.error), 
-        new transports.MongoDB(mongoDBOptions)
+        //new transports.MongoDB(mongoDBOptions)
     ]
 });
 

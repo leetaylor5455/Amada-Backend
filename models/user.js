@@ -2,6 +2,7 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -23,6 +24,12 @@ const userSchema = new mongoose.Schema({
     },
     isAdmin: Boolean
 });
+
+userSchema.methods.hashPassword = async function() {
+    const salt = await bcrypt.genSalt(10);
+    const hashed = await bcrypt.hash(this.password, salt);
+    return this.password = hashed;
+}
 
 userSchema.methods.generateAuthToken = function() {
     return jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, config.get('jwtPrivateKey'));
