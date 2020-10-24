@@ -1,12 +1,9 @@
-const {User} = require('../models/user');
+const { User } = require('../models/userModel');
 const Joi = require('joi');
-const express = require('express');
-const router = express.Router();
 const _ = require('lodash');
 const bcrypt = require('bcrypt');
 
-
-router.post('/', async (req, res) => {
+exports.login_post = async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -18,7 +15,7 @@ router.post('/', async (req, res) => {
 
     const token = user.generateAuthToken();
     res.status(200).send(token); // send to HTML header so that it can be read by client
-});
+}
 
 function validate(req) {
     const schema = Joi.object({
@@ -28,5 +25,3 @@ function validate(req) {
 
     return schema.validate(req);
 }
-
-module.exports = router;

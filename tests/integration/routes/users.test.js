@@ -1,4 +1,4 @@
-let { User } = require('../../../models/user');
+let { User } = require('../../../models/userModel');
 const request = require('supertest');
 
 describe('GET /me', () => {    

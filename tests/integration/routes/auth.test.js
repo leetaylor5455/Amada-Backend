@@ -1,4 +1,4 @@
-const { User } = require('../../../models/user');
+const { User } = require('../../../models/userModel');
 const request = require('supertest');
 const jwt = require('jsonwebtoken');
 const config = require('config');

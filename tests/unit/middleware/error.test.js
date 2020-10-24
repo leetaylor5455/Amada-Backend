@@ -1,4 +1,4 @@
-const errorMiddleware = require('../../../middleware/error');
+const errorMiddleware = require('../../../middleware/errorMiddleware');
 const mongoose = require('mongoose');
 
 describe('error middlware', () => {

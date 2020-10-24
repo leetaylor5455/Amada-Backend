@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const logger = require('../middleware/logger');
+const logger = require('../middleware/loggerMiddleware');
 const config = require('config');
 
 module.exports = function() {

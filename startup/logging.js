@@ -1,4 +1,4 @@
-const logger = require('../middleware/logger');
+const logger = require('../middleware/loggerMiddleware');
 require('winston-mongodb');
 
 module.exports = function() {
